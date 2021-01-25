@@ -1,4 +1,4 @@
-import * as genresAPI from "./fakeGenreService";
+import * as genresAPI from "./fakeGeneService";
 
 const movies = [
   {
