@@ -5,8 +5,10 @@ const Like = props => {
             if(!props.liked)
                  classes += "-o"; 
         return ( 
-            <i onClick={props.onClick} className ={classes} 
+            <i onClick={props.onClick}
+            style={{cursor:"pointer"}} 
+            className ={classes} 
             aria-hidden="true"></i>
          );
-    };
+    }
 export default Like;
