@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import {getMovies} from '../services/fakeMovieService';
-import MoviesTable from './moviesTable';
 import Pagination from './common/pagination';
 import {paginate} from '../utils/paginate';
 import ListGroup from './common/listGroup';
