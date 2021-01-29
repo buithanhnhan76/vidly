@@ -14,8 +14,9 @@ class Movies extends Component {
       currentPage: 1
      };
 
-     componentDidMount{
-         this.setState({movies:getMovies(),genre: getGenres()});
+     componentDidMount ()
+     {
+         this.setState({movies:getMovies(),genres: getGenres()});
      }
 
      handleLike = (movie) =>
@@ -50,8 +51,10 @@ class Movies extends Component {
 
         return (
             <div className="row">
-                <div className="col-2">
-                    <ListGroup items={this.state.genres} onItemSelect={this.hanleGenreSelect}></ListGroup>
+                <div className="col-3">
+                    <ListGroup items={this.state.genres} onItemSelect={this.hanleGenreSelect}
+                    textProperty="name" valueProperty="_id"
+                    ></ListGroup>
                 </div>
                 <div className="col">
                                 <p>Showing {count} movies in the database</p> 
@@ -84,9 +87,9 @@ class Movies extends Component {
                         <Pagination itemsCount = {count} pageSize = {pageSize}
                         onPageChange = {this.handlePageChange} currentPage={currentPage}
                         />
+                    </div>
                 </div>
             
-           </div className="row">
          );
     }
 }
