@@ -9,4 +9,9 @@ const ListGroup = (props) => {
     </ul>;
 }
  
+ListGroup.defaultProps = {
+    textProperty: "name",
+    valueProperty: "_id" 
+}
+
 export default ListGroup;
