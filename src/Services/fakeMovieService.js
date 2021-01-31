@@ -96,7 +96,7 @@ export function saveMovie(movie) {
     movies.push(movieInDb);
   }
 
-  return movieInDb;
+    return movieInDb;
 }
 
 export function deleteMovie(id) {

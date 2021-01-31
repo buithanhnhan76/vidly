@@ -7,6 +7,7 @@ import {getGenres} from '../services/fakeGeneService';
 import MoviesTable from './moviesTable';
 import _ from 'lodash';
 
+
 class Movies extends Component {
     state = { 
       movies: [],
@@ -45,8 +46,6 @@ class Movies extends Component {
      };
 
      handleSort = sortColumn => {
-       
-
         this.setState({sortColumn});    
      }
 
