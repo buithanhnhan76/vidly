@@ -21,7 +21,7 @@ class Movies extends Component {
      {
          const genres = [{_id: "",name:"All Genres"},...getGenres()];
          this.setState({movies:getMovies(),genres});
-     }
+     };
 
      handleLike = (movie) =>
      {
@@ -31,7 +31,7 @@ class Movies extends Component {
          movies[index].liked = !movies[index].liked;
          this.setState({movies});
 
-     }
+     };
      handleDelete = movie => {
         const movies = this.state.movies.filter(m => m._id !== movie._id);
         this.setState({movies});
@@ -77,7 +77,8 @@ class Movies extends Component {
         return (
             <div className="row">
                 <div className="col-3">
-                        <ListGroup items={this.state.genres} onItemSelect={this.handleGenreSelect}
+                        <ListGroup items={this.state.genres} 
+                        onItemSelect={this.handleGenreSelect}
                         selectedItem = {this.state.selectedGenre}
                         ></ListGroup>
                 </div>
@@ -94,6 +95,6 @@ class Movies extends Component {
             
          );
     }
-}
+};
  
 export default Movies;
